@@ -1,0 +1,60 @@
+C51 COMPILER V9.54   MAIN                                                                  04/20/2025 19:45:36 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "Delay.h"
+   3          #include "Mled.h"
+   4          sbit RCK=P3^5;//RCLK上沿锁存
+   5          sbit SCK=P3^6;//SRCLK上沿移位
+   6          sbit SER=P3^4;
+   7          unsigned char move[]={
+   8            0x78,0x84,0x82,0x41,0x41,0x82,0x84,0x78,
+   9            0x78,0xFC,0xC6,0x43,0x43,0xC6,0xFC,0x78,
+  10            0x78,0xFC,0xFE,0x67,0x67,0xFE,0xFC,0x78,
+  11            0x78,0xFC,0xFE,0x67,0x67,0xFE,0xFC,0x78,
+  12            0x78,0xFC,0xFE,0x7F,0x7F,0xFE,0xFC,0x78,
+  13            
+  14          };
+  15          unsigned char i,offset,count;
+  16          void main()
+  17          {
+  18   1        LED_Init();
+  19   1      
+  20   1        while (1)
+  21   1        {
+  22   2          
+  23   2          for(i=0;i<8;i++)
+  24   2          {
+  25   3            MLED_Show(i,move[i+offset]);
+  26   3          }
+  27   2          count++;
+  28   2          if(count>10)
+  29   2          {
+  30   3            count=0;
+  31   3            offset+=8;
+  32   3            if(offset==24){offset=0;}
+  33   3          }
+  34   2          
+  35   2        }
+  36   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     57    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     43    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
