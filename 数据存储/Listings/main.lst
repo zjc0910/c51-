@@ -1,0 +1,70 @@
+C51 COMPILER V9.54   MAIN                                                                  04/19/2025 20:28:14 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "lcd1602.h"
+   3          #include "key.h"
+   4          #include "at24c02.h"
+   5          #include "delay.h"
+   6          
+   7          
+   8          
+   9          void main()
+  10          {
+  11   1        unsigned char Keynum,num,re;
+  12   1        LCD_Init();
+  13   1      
+  14   1        while (1)
+  15   1        {
+  16   2            Keynum=Key();
+  17   2          if(Keynum==1)
+  18   2          {
+  19   3            num++;
+  20   3            LCD_ShowNum(1,1,num,5);
+  21   3          }
+  22   2          if(Keynum==2)
+  23   2          {
+  24   3            num--;
+  25   3            LCD_ShowNum(1,1,num,5);
+  26   3          }
+  27   2          if(Keynum==3)
+  28   2          {
+  29   3          AT24C02_write(0,num);
+  30   3          LCD_ShowString(1,8,"write");
+  31   3            Delay(5000);
+  32   3          LCD_ShowString(1,8,"     ");
+  33   3          }
+  34   2          if(Keynum==4)
+  35   2          {
+  36   3          re=AT24C02_read(0);
+  37   3          LCD_ShowString(1,8,"read");
+  38   3            Delay(5000);
+  39   3          LCD_ShowString(1,8,"    "); 
+  40   3          LCD_ShowNum(2,1,re,5);
+  41   3            
+  42   3          }
+  43   2        }
+  44   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    156    ----
+   CONSTANT SIZE    =     22    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+C51 COMPILER V9.54   MAIN                                                                  04/19/2025 20:28:14 PAGE 2   
+
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
