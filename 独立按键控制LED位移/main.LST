@@ -1,0 +1,80 @@
+C51 COMPILER V9.01   MAIN                                                                  04/12/2025 16:57:55 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Users\z'j'c\Desktop\«∂»Î Ω\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          void Delay1ms(unsigned int xms)         //@12.000MHz
+   3          {
+   4   1              while(xms--)
+   5   1              {
+   6   2                      unsigned char i, j;
+   7   2      
+   8   2                      i = 2;
+   9   2                      j = 239;
+  10   2                      do
+  11   2                      {
+  12   3                              while (--j);
+  13   3                      } while (--i);
+  14   2              }
+  15   1      }
+  16          void main()
+  17          {
+  18   1              unsigned char LEDNUM=0;
+  19   1              unsigned char LEDN=8;
+  20   1              P2=0xfe;//1111 1110
+  21   1              
+  22   1              while(1)
+  23   1              {
+  24   2                      unsigned char LEDNUM;
+  25   2                      if(P3_1==0)
+  26   2                      {
+  27   3                              Delay1ms(20);
+  28   3                              while(P3_1==0);
+  29   3                              Delay1ms(20);
+  30   3                              LEDNUM++;
+  31   3                              if(LEDNUM>8)
+  32   3                                      LEDNUM=0;
+  33   3                              P2=~(0x01<<LEDNUM);     
+  34   3                      
+  35   3                      }
+  36   2                      else if(P3_0==0)
+  37   2                      {
+  38   3                              Delay1ms(20);
+  39   3                              while(P3_0==0);
+  40   3                              Delay1ms(20);
+  41   3                              if(LEDNUM==0)
+  42   3                                      LEDNUM=7;
+  43   3                              else 
+  44   3                                      LEDNUM--;
+  45   3                              P2=~(0x01<<LEDNUM);                             
+  46   3                      }
+  47   2              
+  48   2              
+  49   2              
+  50   2              
+  51   2              }
+  52   1      
+  53   1      
+  54   1      }
+  55          
+C51 COMPILER V9.01   MAIN                                                                  04/12/2025 16:57:55 PAGE 2   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    121    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       5
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
