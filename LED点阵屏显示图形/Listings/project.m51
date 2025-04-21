@@ -1,0 +1,145 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/16/2025  16:43:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\Delay.obj TO .\Objects\project PRINT (.\Listings\project.m51) 
+>> RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\Delay.obj (DELAY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     002DH     UNIT         ?PR?__74HC595_WRITEBYTE?MAIN
+            CODE    0030H     0025H     UNIT         ?PR?_MLED_SHOW?MAIN
+            CODE    0055H     0018H     UNIT         ?PR?MAIN?MAIN
+            CODE    006DH     0015H     UNIT         ?PR?_DELAY?DELAY
+            CODE    0082H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project (MAIN)
+
+
+SEGMENT                                DATA_GROUP 
+  +--> CALLED SEGMENT                START    LENGTH
+----------------------------------------------------
+?C_C51STARTUP                        -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                        -----    -----
+  +--> ?PR?_MLED_SHOW?MAIN
+
+?PR?_MLED_SHOW?MAIN                  -----    -----
+  +--> ?PR?__74HC595_WRITEBYTE?MAIN
+  +--> ?PR?_DELAY?DELAY
+
+?PR?_DELAY?DELAY                     0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (MAIN)
+
+  VALUE           TYPE          NAME
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/16/2025  16:43:58  PAGE 2
+
+
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00B0H         PUBLIC        P3
+  C:0003H         PUBLIC        __74HC595_writeByte
+  C:0055H         PUBLIC        main
+  C:0030H         PUBLIC        _MLED_Show
+  B:00B0H.5       PUBLIC        RCK
+  B:00B0H.6       PUBLIC        SCK
+  B:00B0H.4       PUBLIC        SER
+  -------         PROC          __74HC595_WRITEBYTE
+  D:0005H         SYMBOL        Byte
+  -------         DO            
+  D:0003H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         12
+  C:0005H         LINE#         13
+  C:0005H         LINE#         15
+  C:0007H         LINE#         16
+  C:0007H         LINE#         17
+  C:0023H         LINE#         18
+  C:0025H         LINE#         19
+  C:0027H         LINE#         20
+  C:002BH         LINE#         21
+  C:002DH         LINE#         22
+  C:002FH         LINE#         25
+  -------         ENDPROC       __74HC595_WRITEBYTE
+  -------         PROC          _MLED_SHOW
+  D:0002H         SYMBOL        Column
+  D:0004H         SYMBOL        Data
+  C:0030H         LINE#         32
+  C:0032H         LINE#         33
+  C:0032H         LINE#         34
+  C:0037H         LINE#         35
+  C:004CH         LINE#         36
+  C:0051H         LINE#         37
+  C:0054H         LINE#         39
+  -------         ENDPROC       _MLED_SHOW
+  -------         PROC          MAIN
+  C:0055H         LINE#         40
+  C:0055H         LINE#         41
+  C:0055H         LINE#         42
+  C:0057H         LINE#         43
+  C:0059H         LINE#         45
+  C:0059H         LINE#         46
+  C:0059H         LINE#         47
+  C:0062H         LINE#         48
+  C:006BH         LINE#         49
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:006DH         PUBLIC        _Delay
+  -------         PROC          _DELAY
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/16/2025  16:43:58  PAGE 3
+
+
+  D:0007H         SYMBOL        xms
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:0009H         SYMBOL        j
+  -------         ENDDO         
+  C:006DH         LINE#         1
+  C:006DH         LINE#         2
+  C:006DH         LINE#         3
+  C:0073H         LINE#         4
+  C:0073H         LINE#         7
+  C:0076H         LINE#         8
+  C:0079H         LINE#         10
+  C:0079H         LINE#         11
+  C:007CH         LINE#         12
+  C:007FH         LINE#         13
+  C:0081H         LINE#         14
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DELAY
+
+Program Size: data=11.0 xdata=0 code=142
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
