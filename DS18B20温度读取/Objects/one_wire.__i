@@ -1,0 +1,1 @@
+"one_wire.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\one_wire.lst) TABS (2) OBJECT(.\Objects\one_wire.obj)
