@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"mian.obj" 
+TO "project" 
+RAMSIZE(256) 
