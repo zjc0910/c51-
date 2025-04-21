@@ -1,0 +1,292 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/12/2025  22:16:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\USERS\Z'J'C\DESKTOP\嵌入式\C51\BIN\BL51.EXE main.obj TO project RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\USERS\Z'J'C\DESKTOP\嵌入式\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0011H     UNIT         ?PR?DISPLAY0?MAIN
+            CODE    0014H     0011H     UNIT         ?PR?DISPLAY1?MAIN
+            CODE    0025H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0031H     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    0039H     0007H     UNIT         ?PR?LED1?MAIN
+            CODE    0040H     0007H     UNIT         ?PR?LED2?MAIN
+            CODE    0047H     0007H     UNIT         ?PR?LED3?MAIN
+            CODE    004EH     0007H     UNIT         ?PR?LED4?MAIN
+            CODE    0055H     0007H     UNIT         ?PR?LED5?MAIN
+            CODE    005CH     0007H     UNIT         ?PR?LED6?MAIN
+            CODE    0063H     0007H     UNIT         ?PR?LED7?MAIN
+            CODE    006AH     0007H     UNIT         ?PR?LED8?MAIN
+            CODE    0071H     0004H     UNIT         ?PR?DISPLAY2?MAIN
+            CODE    0075H     0004H     UNIT         ?PR?DISPLAY3?MAIN
+            CODE    0079H     0004H     UNIT         ?PR?DISPLAY4?MAIN
+            CODE    007DH     0004H     UNIT         ?PR?DISPLAY5?MAIN
+            CODE    0081H     0004H     UNIT         ?PR?DISPLAY6?MAIN
+            CODE    0085H     0004H     UNIT         ?PR?DISPLAY7?MAIN
+            CODE    0089H     0004H     UNIT         ?PR?DISPLAY8?MAIN
+            CODE    008DH     0004H     UNIT         ?PR?DISPLAY9?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   project (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?LED1?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/12/2025  22:16:42  PAGE 2
+
+
+  +--> ?PR?DISPLAY7?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:0039H         PUBLIC        LED1
+  C:0040H         PUBLIC        LED2
+  C:0047H         PUBLIC        LED3
+  C:004EH         PUBLIC        LED4
+  C:0055H         PUBLIC        LED5
+  C:005CH         PUBLIC        LED6
+  C:0063H         PUBLIC        LED7
+  C:006AH         PUBLIC        LED8
+  B:0080H.0       PUBLIC        P0_0
+  B:0080H.1       PUBLIC        P0_1
+  B:0080H.2       PUBLIC        P0_2
+  B:0080H.3       PUBLIC        P0_3
+  B:00A0H.2       PUBLIC        P2_2
+  B:0080H.4       PUBLIC        P0_4
+  B:00A0H.3       PUBLIC        P2_3
+  B:0080H.5       PUBLIC        P0_5
+  B:00A0H.4       PUBLIC        P2_4
+  B:0080H.6       PUBLIC        P0_6
+  B:0080H.7       PUBLIC        P0_7
+  C:0031H         PUBLIC        main
+  C:0003H         PUBLIC        display0
+  C:0014H         PUBLIC        display1
+  C:0071H         PUBLIC        display2
+  C:0075H         PUBLIC        display3
+  C:0079H         PUBLIC        display4
+  C:007DH         PUBLIC        display5
+  C:0081H         PUBLIC        display6
+  C:0085H         PUBLIC        display7
+  C:0089H         PUBLIC        display8
+  C:008DH         PUBLIC        display9
+  -------         PROC          LED1
+  C:0039H         LINE#         2
+  C:0039H         LINE#         3
+  C:0039H         LINE#         4
+  C:003FH         LINE#         5
+  -------         ENDPROC       LED1
+  -------         PROC          LED2
+  C:0040H         LINE#         6
+  C:0040H         LINE#         7
+  C:0040H         LINE#         8
+  C:0042H         LINE#         9
+  C:0046H         LINE#         10
+  -------         ENDPROC       LED2
+  -------         PROC          LED3
+  C:0047H         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/12/2025  22:16:42  PAGE 3
+
+
+  C:0047H         LINE#         12
+  C:0047H         LINE#         13
+  C:004BH         LINE#         14
+  C:004DH         LINE#         15
+  -------         ENDPROC       LED3
+  -------         PROC          LED4
+  C:004EH         LINE#         16
+  C:004EH         LINE#         17
+  C:004EH         LINE#         18
+  C:0052H         LINE#         19
+  C:0054H         LINE#         20
+  -------         ENDPROC       LED4
+  -------         PROC          LED5
+  C:0055H         LINE#         21
+  C:0055H         LINE#         22
+  C:0055H         LINE#         23
+  C:0059H         LINE#         24
+  C:005BH         LINE#         25
+  -------         ENDPROC       LED5
+  -------         PROC          LED6
+  C:005CH         LINE#         26
+  C:005CH         LINE#         27
+  C:005CH         LINE#         28
+  C:0060H         LINE#         29
+  C:0062H         LINE#         30
+  -------         ENDPROC       LED6
+  -------         PROC          LED7
+  C:0063H         LINE#         31
+  C:0063H         LINE#         32
+  C:0063H         LINE#         33
+  C:0067H         LINE#         34
+  C:0069H         LINE#         35
+  -------         ENDPROC       LED7
+  -------         PROC          LED8
+  C:006AH         LINE#         36
+  C:006AH         LINE#         37
+  C:006AH         LINE#         38
+  C:0070H         LINE#         39
+  -------         ENDPROC       LED8
+  -------         PROC          DISPLAY0
+  C:0003H         LINE#         40
+  C:0003H         LINE#         41
+  C:0003H         LINE#         42
+  C:0007H         LINE#         43
+  C:0013H         LINE#         44
+  -------         ENDPROC       DISPLAY0
+  -------         PROC          DISPLAY1
+  C:0014H         LINE#         45
+  C:0014H         LINE#         46
+  C:0014H         LINE#         47
+  C:0018H         LINE#         48
+  C:0024H         LINE#         50
+  -------         ENDPROC       DISPLAY1
+  -------         PROC          DISPLAY2
+  C:0071H         LINE#         51
+  C:0071H         LINE#         52
+  C:0071H         LINE#         53
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/12/2025  22:16:42  PAGE 4
+
+
+  C:0074H         LINE#         54
+  -------         ENDPROC       DISPLAY2
+  -------         PROC          DISPLAY3
+  C:0075H         LINE#         55
+  C:0075H         LINE#         56
+  C:0075H         LINE#         57
+  C:0078H         LINE#         58
+  -------         ENDPROC       DISPLAY3
+  -------         PROC          DISPLAY4
+  C:0079H         LINE#         59
+  C:0079H         LINE#         60
+  C:0079H         LINE#         61
+  C:007CH         LINE#         62
+  -------         ENDPROC       DISPLAY4
+  -------         PROC          DISPLAY5
+  C:007DH         LINE#         63
+  C:007DH         LINE#         64
+  C:007DH         LINE#         65
+  C:0080H         LINE#         66
+  -------         ENDPROC       DISPLAY5
+  -------         PROC          DISPLAY6
+  C:0081H         LINE#         67
+  C:0081H         LINE#         68
+  C:0081H         LINE#         69
+  C:0084H         LINE#         70
+  -------         ENDPROC       DISPLAY6
+  -------         PROC          DISPLAY7
+  C:0085H         LINE#         71
+  C:0085H         LINE#         72
+  C:0085H         LINE#         73
+  C:0088H         LINE#         74
+  -------         ENDPROC       DISPLAY7
+  -------         PROC          DISPLAY8
+  C:0089H         LINE#         75
+  C:0089H         LINE#         76
+  C:0089H         LINE#         77
+  C:008CH         LINE#         78
+  -------         ENDPROC       DISPLAY8
+  -------         PROC          DISPLAY9
+  C:008DH         LINE#         79
+  C:008DH         LINE#         80
+  C:008DH         LINE#         81
+  C:0090H         LINE#         82
+  -------         ENDPROC       DISPLAY9
+  -------         PROC          MAIN
+  C:0031H         LINE#         83
+  C:0031H         LINE#         84
+  C:0031H         LINE#         85
+  C:0031H         LINE#         86
+  C:0031H         LINE#         87
+  C:0034H         LINE#         88
+  C:0037H         LINE#         89
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED2?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/12/2025  22:16:42  PAGE 5
+
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED3?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED4?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED5?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED6?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED7?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LED8?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY0?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY1?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY2?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY3?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY4?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY5?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY6?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY8?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISPLAY9?MAIN
+
+Program Size: data=9.0 xdata=0 code=145
+LINK/LOCATE RUN COMPLETE.  16 WARNING(S),  0 ERROR(S)
