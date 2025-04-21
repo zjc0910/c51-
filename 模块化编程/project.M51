@@ -1,0 +1,165 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/13/2025  03:58:02  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\USERS\Z'J'C\DESKTOP\嵌入式\C51\BIN\BL51.EXE mian.obj, Delay.obj, Nixie.obj TO project RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  mian.obj (MIAN)
+  Delay.obj (DELAY)
+  Nixie.obj (NIXIE)
+  C:\USERS\Z'J'C\DESKTOP\嵌入式\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\USERS\Z'J'C\DESKTOP\嵌入式\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  project (MIAN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?NIXIE
+            DATA    0012H     0002H     UNIT         _DATA_GROUP_
+            IDATA   0014H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0077H     UNIT         ?PR?_RESEARCH?NIXIE
+            CODE    0106H     001EH     UNIT         ?PR?MAIN?MIAN
+            CODE    0124H     0015H     UNIT         ?PR?_DELAY?DELAY
+            CODE    0139H     000DH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   project (MIAN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MIAN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MIAN                  -----    -----
+  +--> ?PR?_RESEARCH?NIXIE
+
+?PR?_RESEARCH?NIXIE            -----    -----
+  +--> ?PR?_DELAY?DELAY
+
+?PR?_DELAY?DELAY               0012H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  project (MIAN)
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/13/2025  03:58:02  PAGE 2
+
+
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MIAN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0106H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0106H         LINE#         4
+  C:0106H         LINE#         5
+  C:0106H         LINE#         6
+  C:0106H         LINE#         7
+  C:0106H         LINE#         8
+  C:010DH         LINE#         10
+  C:0114H         LINE#         12
+  C:011BH         LINE#         14
+  C:0122H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MIAN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0124H         PUBLIC        _Delay
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        xms
+  -------         DO            
+  D:0012H         SYMBOL        i
+  D:0013H         SYMBOL        j
+  -------         ENDDO         
+  C:0124H         LINE#         1
+  C:0124H         LINE#         2
+  C:0124H         LINE#         3
+  C:012AH         LINE#         4
+  C:012AH         LINE#         7
+  C:012DH         LINE#         8
+  C:0130H         LINE#         10
+  C:0130H         LINE#         11
+  C:0133H         LINE#         12
+  C:0136H         LINE#         13
+  C:0138H         LINE#         14
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        NIXIE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  B:00A0H.4       PUBLIC        P2_4
+  D:0008H         PUBLIC        num
+  C:008FH         PUBLIC        _research
+  -------         PROC          _RESEARCH
+  D:0007H         SYMBOL        LEDNUM
+  D:0005H         SYMBOL        NUM
+  C:008FH         LINE#         5
+  C:008FH         LINE#         6
+  C:008FH         LINE#         7
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/13/2025  03:58:02  PAGE 3
+
+
+  C:00BCH         LINE#         8
+  C:00BCH         LINE#         9
+  C:00BCH         LINE#         10
+  C:00BEH         LINE#         11
+  C:00C0H         LINE#         12
+  C:00C0H         LINE#         13
+  C:00C4H         LINE#         14
+  C:00C6H         LINE#         15
+  C:00C8H         LINE#         16
+  C:00C8H         LINE#         17
+  C:00CCH         LINE#         18
+  C:00CEH         LINE#         19
+  C:00D0H         LINE#         20
+  C:00D0H         LINE#         21
+  C:00D4H         LINE#         22
+  C:00D6H         LINE#         23
+  C:00D8H         LINE#         24
+  C:00D8H         LINE#         25
+  C:00DAH         LINE#         26
+  C:00DEH         LINE#         27
+  C:00E0H         LINE#         28
+  C:00E0H         LINE#         29
+  C:00E4H         LINE#         30
+  C:00E6H         LINE#         31
+  C:00E8H         LINE#         32
+  C:00E8H         LINE#         33
+  C:00ECH         LINE#         34
+  C:00EEH         LINE#         35
+  C:00F0H         LINE#         36
+  C:00F0H         LINE#         37
+  C:00F6H         LINE#         38
+  C:00F6H         LINE#         40
+  C:00F6H         LINE#         41
+  C:00FDH         LINE#         42
+  C:0102H         LINE#         43
+  C:0105H         LINE#         44
+  -------         ENDPROC       _RESEARCH
+  -------         ENDMOD        NIXIE
+
+Program Size: data=21.0 xdata=0 code=326
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

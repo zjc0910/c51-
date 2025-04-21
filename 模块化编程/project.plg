@@ -1,0 +1,102 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\z'j'c\Desktop\嵌入式\c51项目\模块化编程\project.uvproj
+Project File Date:  04/13/2025
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling mian.c...
+MIAN.C(3): error C141: syntax error near 'void'
+mian.c(11): warning C316: unterminated conditionals
+compiling Delay.c...
+Target not created
+Build target 'Target 1'
+compiling mian.c...
+linking...
+Program Size: data=11.0 xdata=0 code=43
+"project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling Nixie.c...
+NIXIE.C(7): error C202: 'P2_2': undefined identifier
+NIXIE.C(10): error C202: 'P2_3': undefined identifier
+NIXIE.C(11): error C202: 'P2_2': undefined identifier
+NIXIE.C(14): error C202: 'P2_2': undefined identifier
+NIXIE.C(15): error C202: 'P2_3': undefined identifier
+NIXIE.C(18): error C202: 'P2_2': undefined identifier
+NIXIE.C(19): error C202: 'P2_4': undefined identifier
+NIXIE.C(22): error C202: 'P2_4': undefined identifier
+NIXIE.C(23): error C202: 'P2_2': undefined identifier
+NIXIE.C(26): error C202: 'P2_4': undefined identifier
+NIXIE.C(27): error C202: 'P2_3': undefined identifier
+NIXIE.C(30): error C202: 'P2_4': undefined identifier
+NIXIE.C(31): error C202: 'P2_2': undefined identifier
+NIXIE.C(34): error C202: 'P2_2': undefined identifier
+NIXIE.C(38): error C202: 'P0': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling Nixie.c...
+NIXIE.C(42): warning C206: 'delay': missing function-prototype
+NIXIE.C(42): error C267: 'delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling Nixie.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_RESEARCH?NIXIE
+Program Size: data=21.0 xdata=0 code=303
+"project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+compiling Delay.c...
+compiling Nixie.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_RESEARCH?NIXIE
+Program Size: data=21.0 xdata=0 code=303
+"project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_RESEARCH?NIXIE
+Program Size: data=21.0 xdata=0 code=303
+"project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+compiling Delay.c...
+compiling Nixie.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_RESEARCH?NIXIE
+Program Size: data=21.0 xdata=0 code=303
+"project" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+MIAN.C(7): warning C206: 'research': missing function-prototype
+MIAN.C(7): error C267: 'research': requires ANSI-style prototype
+MIAN.C(18): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling mian.c...
+MIAN.C(19): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling mian.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM
+    MODULE:  Nixie.obj (NIXIE)
+Program Size: data=31.0 xdata=0 code=338
+Target not created
+Build target 'Target 1'
+compiling mian.c...
+linking...
+Program Size: data=21.0 xdata=0 code=326
+"project" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=21.0 xdata=0 code=326
+creating hex file from "project"...
+"project" - 0 Error(s), 0 Warning(s).
